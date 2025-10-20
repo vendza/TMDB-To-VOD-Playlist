@@ -1,147 +1,167 @@
-# TMDB to VOD: Free Live TV, Movies & Series Playlist \[Xtream Codes & M3U8\]
+TMDB to VOD: Free Live TV, Movies & Series Playlist [Xtream Codes & M3U8]
+Update 09/28/2025
 
-## Update 09/28/2025
+Live TV: Fixed the Live TV section and added DrewLive
+, a massive all-in-one source of 7,000+ channels.
 
-- <strong>Live TV:</strong> Fixed the Live TV section and added <a href="https://github.com/Drewski2423/DrewLive" target=_blank>DrewLive</a>, a massive all in one source of 7,000+ channels.
-- <strong>Read Debrid:</strong> Fixed Read Debrid cache checks and added Streamio Sites as a debrid source (support for more debrid services coming soon).
-- <strong>Stream sources:</strong> Cleaned up and removed several direct stream sources in both the main script and HeadlessVidX to improve reliability.
-- <strong>Adult VOD:</strong> Fixed the Adult VOD source, the 10,000 title adult movie library now refreshes automatically every Sunday.
-- <strong>HeadlessVidX:</strong> Major overhaul and bug fixes. The software had numerous issues and I spent several weeks stabilizing it and bringing it up to the standard I wanted.
-- <strong>Overall:</strong> Much of the project had broken after more than a year without updates. Things are working much better now, and I’ve got plans to add more features in upcoming releases.
+Real Debrid: Fixed Real Debrid cache checks and added Streamio Sites as a Debrid source (support for more Debrid services coming soon).
 
----
+Stream Sources: Cleaned up and removed several direct stream sources in both the main script and HeadlessVidX to improve reliability.
 
-# Summary
+Adult VOD: Fixed the Adult VOD source — the 10,000-title adult movie library now refreshes automatically every Sunday.
 
-<p>Create Live TV, Movies and TV Series Video on Demand (VOD) Playlist's using Xtream Codes or M3U8 Format.
+HeadlessVidX: Major overhaul and bug fixes. The software had numerous issues and has now been stabilized and improved.
 
-Generate dynamic playlists for Live TV, Movies and TV Series using a mock version of Xtream Codes. Create IPTV, Movies and Series playlists with comprehensive metadata. Streaming links located using TMDB, Real-Debrid, Premiumize and Direct Sources. Ideal for use with apps like iMplayer, Tivimate, IPTV Streamers Pro, XCIPTV Player and more.</p>
+Overall: The project had been broken for over a year — it’s now fully functional again with many improvements and new features planned.
 
-<table style="border-collapse: collapse; border: none;">
-  <tr>
-    <td style="border: none;">
-      <a href="https://github.com/gogetta69/TMDB-To-VOD-Playlist/archive/refs/heads/main.zip">
-        <img src="https://img.shields.io/badge/Download%20ZIP-latest-blue?style=for-the-badge&logo=github" alt="Download ZIP">
-      </a>
-    </td>
-    <td style="border: none; padding-left: 10px;"> <!-- Adjust padding as needed -->
-      <a href="https://ko-fi.com/gogetta69">
-        <img src="https://www.ko-fi.com/img/githubbutton_sm.svg" alt="Ko-fi">
-      </a>
-    </td>
-  </tr>
-</table>
+Summary
 
-# Demo Video
+Create Live TV, Movies, and TV Series Video-on-Demand (VOD) playlists using Xtream Codes or M3U8 format.
 
-<img src="https://github.com/user-attachments/assets/7925cf0a-63b7-43ab-8a1e-d099306985fe" alt="Demo GIF" width="70%">
-<br><br>
+Generate dynamic playlists with rich metadata using TMDB, Real-Debrid, Premiumize, and direct sources. Ideal for IPTV apps such as iMPlayer, TiviMate, XCIPTV, and IPTV Streamers Pro.
 
-# Screenshots
+<table style="border-collapse: collapse; border: none;"> <tr> <td style="border: none;"> <a href="https://github.com/gogetta69/TMDB-To-VOD-Playlist/archive/refs/heads/main.zip"> <img src="https://img.shields.io/badge/Download%20ZIP-latest-blue?style=for-the-badge&logo=github" alt="Download ZIP"> </a> </td> <td style="border: none; padding-left: 10px;"> <a href="https://ko-fi.com/gogetta69"> <img src="https://www.ko-fi.com/img/githubbutton_sm.svg" alt="Ko-fi"> </a> </td> </tr> </table>
+🐳 Docker Support by Vendza
 
-<table>
-  <tr>
-    <td align="center">
-      <img src="https://github.com/gogetta69/TMDB-To-VOD-Playlist/raw/main/images/101623110311.png" width="400">
-    </td>
-    <td align="center">
-      <img src="https://github.com/gogetta69/TMDB-To-VOD-Playlist/raw/main/images/101623110433.png" width="400">
-    </td>
-    <td align="center">
-      <img src="https://github.com/gogetta69/TMDB-To-VOD-Playlist/raw/main/images/101623110501.png" width="400">
-    </td>
-  </tr>
-  <tr>
-    <td align="center">
-      <img src="https://github.com/gogetta69/TMDB-To-VOD-Playlist/raw/main/images/101623110535.png" width="400">
-    </td>
-    <td align="center">
-      <img src="https://github.com/gogetta69/TMDB-To-VOD-Playlist/raw/main/images/101623110653.png" width="400">
-    </td>
-    <td align="center">
-      <img src="https://github.com/gogetta69/TMDB-To-VOD-Playlist/raw/main/images/101623110819.png" width="400">
-    </td>
-  </tr>
-  <tr>
-    <td align="center">
-      <img src="https://github.com/gogetta69/TMDB-To-VOD-Playlist/raw/main/images/101623110832.png" width="400">
-    </td>
-    <td align="center">
-      <img src="https://github.com/gogetta69/TMDB-To-VOD-Playlist/raw/main/images/101623110847.png" width="400">
-    </td>
-    <td align="center">
-      <img src="https://github.com/gogetta69/TMDB-To-VOD-Playlist/raw/main/images/101623111001.png" width="400">
-    </td>
-  </tr>
-  <tr>
-    <td align="center">
-      <img src="https://github.com/gogetta69/TMDB-To-VOD-Playlist/raw/main/images/101623111026.png" width="400">
-    </td>
-    <!-- Add more images and rows as needed -->
-  </tr>
-</table>
+Docker integration and modernization of this project were contributed by Vendza, who optimized the environment for clean, portable deployment using Docker Compose.
 
-# Features
+This project now includes a fully functional Docker setup with three supporting files:
 
-- Dynamic playlist generation for live tv, movies and TV series
-- Integration with TMDB, Real Debrid, Premiumize and direct sources for enhanced content retrieval
-- Emulation of Xtream Codes software for full metadata details
-- Inclusion of  Live TV sources such as [Daddylive](https://href.li/?https://dlhd.so/24-7-channels.php), [TheTVApp](https://href.li/?https://thetvapp.to/), [MoveOnJoy](https://i.imgur.com/dFazdys.png), [Streamed Su Sports](https://href.li/?https://streamed.pk/), [Pluto TV](https://href.li/?https://downloads.pluto.tv/docs/pluto_tv_channels_listing.pdf) and more.
-- Most of the live TV channels include detailed TV Guide (EPG) information.
-- Automatic caching of found streaming links for efficient playback
-- 10K Full length adult movies added to the VOD (disabled by default)
+File	Description
+docker-compose.yml	Defines the containerized services for TMDB-To-VOD and HeadlessVidX
+.env.example	Template file for environment variables and API keys
+.gitignore	Protects sensitive data and runtime files from being committed
+Quick Start
 
-# Getting Started
+Clone the repository
 
-[![Video Thumbnail](https://raw.githubusercontent.com/gogetta69/TMDB-To-VOD-Playlist/main/images/thumb.PNG)](https://rumble.com/embed/v54v3nx/?pub=4)
-
-1. **Configuration**: Start by setting up the script with the required free [TMDB API Key](https://developer.themoviedb.org/docs/getting-started) and an optional private key for [Real Debrid](https://real-debrid.com/apitoken) or [Premiumize](https://www.premiumize.me/account), which are not mandatory.
-
-2. **Xtream Codes Integration**: Enter the IP address or domain as an Xtream Codes server. Any username and password will work since the script doesn't require authentication. This will automatically load the Live TV, Movies and TV Series playlists into the app.
-
-3. **Non-Xtream Codes Apps**: If your app does not support Xtream Codes, load http://IP_ADDRESS/player_api.php?action=get_vod_streams (replace IP_ADDRESS with your computers ip address) in your browser, then locate the `playlist.m3u8` in the same folder as the script and load it as an M3U playlist. Note that the M3U8 playlists are available for movies and live TV only; TV series cannot be loaded as an M3U playlist.
-
-5. **Playback**: Once everything is set up and the playlists are loaded, you should be able to play a video. Clicking the play button will trigger the script to search multiple websites in the background for a playable link. Please be patient and allow some time for a link to be found and streaming to commence. The script caches and stores the found link for approximately 3 hours, aligning with the typical access token expiration of most direct sources, which occurs at around 4 hours.
-
-5. **Local Hosting**: If you lack a hosting company to run this extremely lightweight script, you can install and run software on your desktop computer like Xampp.
-
-# Changes and Additions
-
-- Added the Premiumize service as an alternative to Real-Debrid. (used only with torrent sites)
-- Added threads when searching torrent sites for magnet links. (speeds up the time it takes to find a link)
-- Added and fixed direct movie and TV show sources as well as more link extractors.
-- Added TheTvApp sports section in the Live TV Playlist (set your app to load EPG and playlist every 12 hours or less.)
-- Added PlutoTV to the live TV playlist (Multi Languages Here: https://github.com/matthuisman/i.mjh.nz)
-- Redesigned the Live TV and DaddyLive functions and playlist. (all of the images in the playlist are working)
-- Fixed a lot of bugs in the torrent search and filtering functions. (it finds links much more often now)
-- Fixed the sorting by resolution and more likely to get higher quality links (torrent sites)
-- Added adult movies to vod (disabled by default)<br>
-
-# What is HeadlessVidX?​
-
-HeadlessVidX is a tool designed to simplify the development of video extractors for streaming websites. It provides an easy-to-use solution for users, regardless of their programming skills, to quickly add video streaming sites to tools such as 'TMDB TO VOD'.
-<table>
-  <tr>
-<td align="center">
-        <img src="https://raw.githubusercontent.com/gogetta69/TMDB-To-VOD-Playlist/main/images/Screenshot%202024-06-14%20at%2016-41-13%20HeadlessVidX%20-%20Home.png" width="400">
-    </td>
-    <td align="center">
-     <img src="https://raw.githubusercontent.com/gogetta69/TMDB-To-VOD-Playlist/main/images/Screenshot%202024-06-14%20at%2016-40-15%20HeadlessVidX%20-%20Trainer.png" width="400">   
-    </td>
-  </tr>
-</table>
-
-# Creating Playlist
-
-You no longer need to manually run create_playlist.php and create_tv_playlist.php. With the workflow set up on GitHub, these playlists are automatically generated twice a day. To create your own movies and series playlist, simply set $userCreatePlaylist to true in the config.php file.
-
-https://github.com/user-attachments/assets/c6af6149-c170-45fc-a6ac-32edd1b3405b
+git clone https://github.com/gogetta69/TMDB-To-VOD-Playlist.git
+cd TMDB-To-VOD-Playlist
 
 
+Create and edit your .env
+
+cp .env.example .env
 
 
+Add your TMDB API key, Real Debrid token, and other values.
 
-# Legal Disclaimer
+Run with Docker Compose
 
-This script retrieves movie information from TMDB and searches for related content on third-party websites. The legality of streaming or downloading content through these websites is uncertain. Please exercise caution and consider the legal and ethical implications of using this script to access and consume copyrighted content. Always respect copyright laws and the terms of service of the websites you visit.
+docker compose up -d
 
+
+Open your browser to
+👉 http://localhost:41063 or your chosen mapped port.
+
+Docker Overview
+
+tmdbtovod
+Main PHP 8.2 + Apache container that hosts the app, API endpoints, and dashboard.
+
+headlessvidx
+Browser automation backend that performs video extraction, scraping, and metadata handling.
+
+Example .env
+TZ=America/Los_Angeles
+APP_PORT=41063
+HEADLESSVIDX_PORT=3202
+TMDB_API_KEY=your_tmdb_api_key_here
+REALDEBRID_TOKEN=your_realdebrid_token_here
+PREMIUMIZE_API_KEY=
+HEADLESSVIDX_ADDRESS=headlessvidx:3202
+
+Example .gitignore
+.env
+logs/
+storage/
+config/*.json
+config/*.yaml
+config/*.yml
+config/*.env
+config/secrets*/
+headlessvidx/files/
+vendor/
+node_modules/
+
+Demo Video
+<img src="https://github.com/user-attachments/assets/7925cf0a-63b7-43ab-8a1e-d099306985fe" alt="Demo GIF" width="70%"> <br><br>
+Screenshots
+<table> <tr> <td align="center"><img src="https://github.com/gogetta69/TMDB-To-VOD-Playlist/raw/main/images/101623110311.png" width="400"></td> <td align="center"><img src="https://github.com/gogetta69/TMDB-To-VOD-Playlist/raw/main/images/101623110433.png" width="400"></td> <td align="center"><img src="https://github.com/gogetta69/TMDB-To-VOD-Playlist/raw/main/images/101623110501.png" width="400"></td> </tr> <tr> <td align="center"><img src="https://github.com/gogetta69/TMDB-To-VOD-Playlist/raw/main/images/101623110535.png" width="400"></td> <td align="center"><img src="https://github.com/gogetta69/TMDB-To-VOD-Playlist/raw/main/images/101623110653.png" width="400"></td> <td align="center"><img src="https://github.com/gogetta69/TMDB-To-VOD-Playlist/raw/main/images/101623110819.png" width="400"></td> </tr> </table>
+Features
+
+Dynamic playlist generation for Live TV, Movies, and TV Series
+
+Integration with TMDB, Real Debrid, Premiumize, and direct sources
+
+Emulates Xtream Codes software for full metadata support
+
+Includes Live TV sources such as Daddylive
+, TheTVApp
+, MoveOnJoy
+, Streamed Su Sports
+, and Pluto TV
+
+Most channels include detailed EPG data
+
+Automatic caching for faster playback
+
+10,000+ adult movies in VOD (disabled by default)
+
+Getting Started
+
+Configuration: Add your TMDB API Key
+ and optional Real Debrid
+ or Premiumize
+ keys.
+
+Xtream Codes Integration: Use your server IP or domain as an Xtream Codes server; authentication isn’t required.
+
+M3U Playback: If your app doesn’t support Xtream Codes, load the playlist.m3u8 generated by the script.
+
+Playback: Wait a few seconds while playable links are fetched and cached.
+
+Local Hosting: You can run it locally using XAMPP or via Docker for better isolation.
+
+Changes and Additions
+
+Added Premiumize support as a Real-Debrid alternative.
+
+Implemented multi-threading for torrent searches.
+
+Expanded and stabilized direct sources and extractors.
+
+Added TheTvApp Sports and PlutoTV sections.
+
+Redesigned Live TV and DaddyLive playlists with working artwork.
+
+Fixed torrent filtering and resolution sorting.
+
+Added adult movie support (disabled by default).
+
+What is HeadlessVidX?
+
+HeadlessVidX is a companion tool that simplifies the development of video extractors.
+It allows users to visually train and add new streaming sites without advanced coding knowledge.
+
+<table> <tr> <td align="center"> <img src="https://raw.githubusercontent.com/gogetta69/TMDB-To-VOD-Playlist/main/images/Screenshot%202024-06-14%20at%2016-41-13%20HeadlessVidX%20-%20Home.png" width="400"> </td> <td align="center"> <img src="https://raw.githubusercontent.com/gogetta69/TMDB-To-VOD-Playlist/main/images/Screenshot%202024-06-14%20at%2016-40-15%20HeadlessVidX%20-%20Trainer.png" width="400"> </td> </tr> </table>
+Creating Playlists
+
+Playlists are automatically generated twice daily via GitHub Actions.
+To manually generate playlists locally, set the following in your config.php:
+
+$userCreatePlaylist = true;
+
+💡 Credits
+
+Original Creator: gogetta69
+
+Docker Integration, Modernization & UI Enhancements: Vendza
+
+Additional Live TV Source: Drewski2423 / DrewLive
+
+⚖️ Legal Disclaimer
+
+This project retrieves metadata and streaming links from third-party websites.
+The legality of accessing or downloading such content depends on your jurisdiction.
+Always respect copyright laws and the terms of service of the sites you visit.
