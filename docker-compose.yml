@@ -1,0 +1,36 @@
+version: "3.8"
+
+services:
+  tmdbtovod:
+    build:
+      context: .
+      dockerfile: Dockerfile           # PHP 8.2 + Apache
+    container_name: tmdbtovod
+    ports:
+      - "${APP_PORT:-41063}:80"        # e.g. http://localhost:41063
+    environment:
+      TZ: ${TZ}
+      TMDB_API_KEY: ${TMDB_API_KEY}
+      REALDEBRID_TOKEN: ${REALDEBRID_TOKEN}
+      PREMIUMIZE_API_KEY: ${PREMIUMIZE_API_KEY}
+      # Keep endpoints unchanged; default to internal service DNS
+      HEADLESSVIDX_ADDRESS: ${HEADLESSVIDX_ADDRESS:-headlessvidx:3202}
+    volumes:
+      - ./www:/var/www/html
+      - ./logs:/var/www/html/logs
+      - ./config:/var/www/config
+      - ./storage:/var/www/storage
+    restart: unless-stopped
+    depends_on:
+      - headlessvidx
+
+  headlessvidx:
+    image: gogetta69/headlessvidx:latest
+    container_name: headlessvidx
+    ports:
+      - "${HEADLESSVIDX_PORT:-3202}:3202"   # e.g. http://localhost:3202
+    environment:
+      TZ: ${TZ}
+    volumes:
+      - ./headlessvidx/files:/app/files
+    restart: unless-stopped
