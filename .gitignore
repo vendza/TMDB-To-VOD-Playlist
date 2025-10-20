@@ -1,0 +1,17 @@
+# Never commit secrets
+.env
+
+# App data & logs
+logs/
+storage/
+config/*.json
+config/*.yaml
+config/*.yml
+config/*.ini
+config/*.env
+config/secrets*/
+headlessvidx/files/
+
+# Node/Composer caches (if present)
+node_modules/
+vendor/
