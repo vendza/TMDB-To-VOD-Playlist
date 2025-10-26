@@ -2,35 +2,40 @@ version: "3.8"
 
 services:
   tmdbtovod:
+    # Build from your Dockerfile in the same folder
     build:
-      context: .
-      dockerfile: Dockerfile           # PHP 8.2 + Apache
+      context: /mnt/user/appdata/tmdbtovod
+      dockerfile: Dockerfile
     container_name: tmdbtovod
     ports:
-      - "${APP_PORT:-41063}:80"        # e.g. http://localhost:41063
+      - "41063:80"                 # → http://192.168.1.54:41063/
     environment:
       TZ: ${TZ}
       TMDB_API_KEY: ${TMDB_API_KEY}
       REALDEBRID_TOKEN: ${REALDEBRID_TOKEN}
       PREMIUMIZE_API_KEY: ${PREMIUMIZE_API_KEY}
-      # Keep endpoints unchanged; default to internal service DNS
-      HEADLESSVIDX_ADDRESS: ${HEADLESSVIDX_ADDRESS:-headlessvidx:3202}
+      HEADLESSVIDX_ADDRESS: ${HEADLESSVIDX_ADDRESS}
+      HEADLESSVIDX_URL: ${HEADLESSVIDX_URL}
     volumes:
-      - ./www:/var/www/html
-      - ./logs:/var/www/html/logs
-      - ./config:/var/www/config
-      - ./storage:/var/www/storage
-    restart: unless-stopped
+      - /mnt/user/appdata/tmdbtovod/www:/var/www/html
+      - /mnt/user/appdata/tmdbtovod/logs:/var/www/html/logs
+      - /mnt/user/appdata/tmdbtovod/config:/var/www/config
+      - /mnt/user/appdata/tmdbtovod/storage:/var/www/storage
     depends_on:
       - headlessvidx
+    restart: unless-stopped
 
   headlessvidx:
-    image: gogetta69/headlessvidx:latest
+    image: browserless/chrome:latest
     container_name: headlessvidx
+    # Browserless listens on 3000 internally → publish 3202 on host
     ports:
-      - "${HEADLESSVIDX_PORT:-3202}:3202"   # e.g. http://localhost:3202
+      - "3202:3000"                # → http://192.168.1.54:3202/
     environment:
       TZ: ${TZ}
-    volumes:
-      - ./headlessvidx/files:/app/files
+      # Helpful defaults; safe to keep
+      ENABLE_CORS: "true"
+      DEFAULT_BLOCK_ADS: "true"
+      CONNECTION_TIMEOUT: "600000"
+    # No persistent volume needed unless you store scripts; add if you want
     restart: unless-stopped
