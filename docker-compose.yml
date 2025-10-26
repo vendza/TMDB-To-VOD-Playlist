@@ -1,41 +1,24 @@
-version: "3.8"
-
 services:
   tmdbtovod:
-    # Build from your Dockerfile in the same folder
     build:
       context: /mnt/user/appdata/tmdbtovod
       dockerfile: Dockerfile
     container_name: tmdbtovod
     ports:
-      - "41063:80"                 # → http://192.168.1.54:41063/
-    environment:
-      TZ: ${TZ}
-      TMDB_API_KEY: ${TMDB_API_KEY}
-      REALDEBRID_TOKEN: ${REALDEBRID_TOKEN}
-      PREMIUMIZE_API_KEY: ${PREMIUMIZE_API_KEY}
-      HEADLESSVIDX_ADDRESS: ${HEADLESSVIDX_ADDRESS}
-      HEADLESSVIDX_URL: ${HEADLESSVIDX_URL}
+      - "41063:80"
     volumes:
-      - /mnt/user/appdata/tmdbtovod/www:/var/www/html
-      - /mnt/user/appdata/tmdbtovod/logs:/var/www/html/logs
-      - /mnt/user/appdata/tmdbtovod/config:/var/www/config
-      - /mnt/user/appdata/tmdbtovod/storage:/var/www/storage
+      - /mnt/user/appdata/tmdbtovod/TMDB-To-VOD-Playlist:/var/www/html:rw
     depends_on:
       - headlessvidx
     restart: unless-stopped
 
   headlessvidx:
-    image: browserless/chrome:latest
-    container_name: headlessvidx
-    # Browserless listens on 3000 internally → publish 3202 on host
+    image: gogetta69/headlessvidx:latest
+    container_name: HeadlessVidX
     ports:
-      - "3202:3000"                # → http://192.168.1.54:3202/
-    environment:
-      TZ: ${TZ}
-      # Helpful defaults; safe to keep
-      ENABLE_CORS: "true"
-      DEFAULT_BLOCK_ADS: "true"
-      CONNECTION_TIMEOUT: "600000"
-    # No persistent volume needed unless you store scripts; add if you want
+      - "3202:3202"
+    volumes:
+      - files:/app/dict
     restart: unless-stopped
+
+volumes:
